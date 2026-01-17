@@ -91,9 +91,13 @@ By default, the project is configured to store persistent data at:
 * WordPress Files: /home/ealshorm/data/wordpress
 
 How it Persists
+
 1- The Makefile ensures these directories exist on the host before launching containers.
+
 2- In docker-compose.yml, these host paths are mounted as volumes.
+
 3- Even if containers are deleted (make clean), the data remains in these folders.
+
 4- To completely wipe the data, you must run make fclean which targets the removal of these specific host directories.
 
 
